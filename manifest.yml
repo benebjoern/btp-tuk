@@ -1,0 +1,13 @@
+applications:
+  - name: btp-tuk # Please do not change this name
+    path: ./
+    buildpacks:
+      - nodejs_buildpack
+    memory: 256M
+    command: node dist/index.js
+    random-route: true
+    services:
+      - tw-connectivity-service
+    env:
+        VITE_ODATA_HPI_HANA_USERNAME: STUDENT2021
+        VITE_ODATA_HPI_HANA_PASSWORD: Student2021
